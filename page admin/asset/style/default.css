@@ -1,0 +1,18 @@
+html{
+    /* 100%: 16px => 62.5% =10px
+    Vậy cứ 1rem = 10px, như vậy sẽ dễ configure cho mấy đối tượng sau
+     */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --blue-title-color: #3B6E9C;
+    --background-color: #ECF8FC;
+    --red-title-color: #D24767;
+    --stand-out: #F89A56;
+    --black-content-color: black;
+    --white-content-color: white;
+}
