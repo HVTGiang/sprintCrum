@@ -1,0 +1,159 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+#header-container {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-content {
+    width: 609px;
+    height: 112px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-img {
+    width: 530px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#header-img img {
+    position: absolute;
+    width: 587px;
+    height: 286px;
+    left: -41px;
+    top: 7px;
+}
+
+#header-content img {
+    width: 77px;
+    height: 97px;
+    margin-left: 3px;
+}
+
+#header-content #header-text {
+    margin-right: 31px;
+}
+
+#title-vi {
+    font-size: 20px;
+    font-family: 'Inner', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--blue-title-color);
+}
+
+#title-en {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--black-content-color);
+}
+
+#header-text #sub-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--red-title-color);
+}
+
+#header-text hr {
+    background-color: var(--black-content-color);
+}
+
+#header-nav {
+    height: 40px;
+    width: 100%;
+    background-color: var(--blue-title-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-nav a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#header-home:hover{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+    height: 40px;
+}
+#header-home:hover p{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+}
+
+#header-home:hover i{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+}
+
+#header-login:hover{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+    height: 40px;
+}
+#header-login:hover p{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+}
+
+#header-login:hover i{
+    background-color: var(--background-color);
+    color: var(--blue-title-color);
+}
+
+#header-nav #header-home {
+    padding:0px 4px ;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-content-color);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 100%px;
+}
+
+#header-nav #header-login {
+    padding:0px 4px ;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-content-color);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 19px;
+}

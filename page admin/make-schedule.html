@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/style/reset.css">
+    <link rel="stylesheet" href="./asset/style/default.css">
+    <link rel="stylesheet" href="./asset/style/make-shedule-style.css">
+    <title>Quản lý đồ án</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <script src="./asset/script/header-import.js"></script>
+
+    <!-- Content -->
+    <div id="content">
+        <!-- Menu -->
+        <div id="menu">
+        </div>
+        <script src="./asset/script/menu-import.js"></script>
+        <div id="content-main">
+            <!-- Breadcumb -->
+            <div id="content-breadcumb">
+                <p>Trang chủ > <span>Tạo hội đồng</span></p>
+            </div>
+            <!-- Notify -->
+            <div id="content-notify">
+                <div id="content-notify-header">
+                    <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                    <p>Tạo đợt đăng ký</p>
+                </div>
+                <div id="datalist">
+
+                </div>
+                <div id="taskzone">
+                    <form action="" method="get">
+                        <label for="startDate" class="form-label">Ngày bắt đầu</label>
+                        <input type="date" name="startDate" id="startDate" value="">
+                        <label for="endDate" class="form-label">Ngày kết thúc</label>
+                        <input type="date" name="endDate" id="endDate" value="">
+                        <br>
+                        <label for="role" class="form-label">Dành cho</label>
+                        <input type="radio" name="role" id="student-checkbox" value="student">
+                        <label for="student" class="radio-label">Sinh viên</label>
+                        <input type="radio" name="role" id="lercturer-checkbox" value="lectuer">
+                        <label for="lecturer" class="radio-label">Giảng viên</label>
+                        <input type="submit" value="Tạo mới">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./asset/script/footer-import.js"></script>
+</body>
+
+</html>
