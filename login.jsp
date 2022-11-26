@@ -12,7 +12,7 @@ int couter=0;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="icon" href="ThuVien/favicon.ico" type="image/x-icon" /><title>
-	Đăng Ký đề tài
+	Quản lý đề tài
 </title><meta name="Keywords" content="UTE Portal :: HCMC University of Technology and Education, Đại học Sư phạm Kỹ thuật" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
