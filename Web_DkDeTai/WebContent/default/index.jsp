@@ -16,9 +16,9 @@ String baseUrl = request.getContextPath() + "/default/home";
     <title>Home</title>
 
     <!-- logo title -->
-    <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
+    <link rel="icon" href="<c:url value='./asset/img/fit-logo.png' /> "type="image/icon type"/>
     <!-- CSS -->
-    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="<c:url value='./asset/css/base.css' />"/>
     <link rel="stylesheet" href="./asset/css/main.css">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@ String baseUrl = request.getContextPath() + "/default/home";
 </head>
 <body>
 <div id="app">
-    <include src="../header/header.jsp"></include>
+    <jsp:include page="./header/header.jsp" />
     <div class="content">
         <div class="content__menu">
             <div class="menu__header"><h3>Danh mục</h3></div>          
@@ -90,7 +90,7 @@ String baseUrl = request.getContextPath() + "/default/home";
             </div>
         </div>
     </div>
-    <include src="../footer/footer.jsp"></include>
+    <jsp:include page="./footer/footer.jsp" />
     </div>
 </body>
 </html>

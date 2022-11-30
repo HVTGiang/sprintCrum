@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<% String context = request.getContextPath(); request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +21,10 @@
     <script src="https://unpkg.com/htmlincludejs"></script>
 </head>
 <body>
-    <include src="./header.html"></include>
-
+    <jsp:include page="./header/header.jsp" />
     <div class="content">
         <div class="login">
+         <form id="form"> <!-- action="<%=context%>/login" --><!-- method="POST" -->>
             <div class="login__header"><h3>ĐĂNG NHẬP</h3></div>
             <form class = "login__form" action=".">
                 <div class="login__form-position">
@@ -41,9 +43,10 @@
                 </div>
                 <input type="submit" value="Join Now">
             </form>
+            </form>
         </div>
     </div>
 
-    <include src="./footer.html"></include>
+     <jsp:include page="./footer/footer.jsp" />
 </body>
 </html>

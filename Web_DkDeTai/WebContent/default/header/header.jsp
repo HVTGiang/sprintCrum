@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<% String context = request.getContextPath(); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +49,11 @@
             </div>
             <div class="header__nav-login">
                 <i class="header__nav-icon fa-solid fa-right-to-bracket"></i>
-                <p class="header__nav-text mr-left-1rem">Đăng nhập</p>
+                <a href="<%=context%>/login">
+                	<p class="header__nav-text mr-left-1rem">
+                		<button class="">Đăng nhập</button>
+                	</p>
+                </a>
             </div>
         </div>
     </header>
