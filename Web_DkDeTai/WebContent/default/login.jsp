@@ -24,9 +24,8 @@
     <jsp:include page="./header/header.jsp" />
     <div class="content">
         <div class="login">
-         <form id="form"> <!-- action="<%=context%>/login" --><!-- method="POST" -->>
             <div class="login__header"><h3>ĐĂNG NHẬP</h3></div>
-            <form class = "login__form" action=".">
+            <form class = "login__form" action="<%=context%>/login" method="POST">
                 <div class="login__form-position">
                     <input type="radio" name="position_choice" id="sinhvien" value="Sinh viên">
                     <label for="sinhvien">Sinh viên</label>

@@ -50,9 +50,7 @@
             <div class="header__nav-login">
                 <i class="header__nav-icon fa-solid fa-right-to-bracket"></i>
                 <a href="<%=context%>/login">
-                	<p class="header__nav-text mr-left-1rem">
-                		<button class="">Đăng nhập</button>
-                	</p>
+                	<p class="header__nav-text mr-left-1rem">Đăng nhập</p>
                 </a>
             </div>
         </div>

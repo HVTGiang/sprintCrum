@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.LoginService;
 
 /**
  * Servlet implementation class LoginController
@@ -35,7 +36,9 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		LoginService loginService = new LoginService(request, response);
+		loginService.handlePostLogin();
+		
 	}
 
 }
