@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý đề tài | Admin</title>
+    <title>Quản lý đề tài | Giảng viên</title>
 
     <!-- logo title -->
     <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
@@ -22,9 +24,9 @@
     <!-- Header -->
     <!--<div id="header"></div>
     script src="./asset/script/header-import.js"></script>-->
-    <include src="./header.html"></include>
+    <jsp:include page="../default/header/header.jsp" />
 
-    <!-- Content -->
+    <!-- Content --> 
     <div class="content">
         <!-- Menu -->
         <div class="content__menu">
@@ -33,27 +35,21 @@
             </div>
             <ul class="menu__nav">
                 <li>
-                    <a href="./make-schedule.html">
+                    <a href="">
                         <i class="fa-solid fa-circle-plus"></i>
-                        Tạo đợt đăng kí
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-users"></i>
-                        Tạo hội đồng
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-circle-info"></i>
                         Thông tin cá nhân
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa-solid fa-user"></i>
-                        Quản lý tài khoản
+                        <i class="fa-solid fa-users"></i>
+                        Đăng ký đề tài
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Chấm điểm đề tài
                     </a>
                 </li>
             </ul>

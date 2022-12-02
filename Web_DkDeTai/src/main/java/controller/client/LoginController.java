@@ -11,7 +11,7 @@ import service.LoginService;
 /**
  * Servlet implementation class LoginController
  */
-@WebServlet("/Login")
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,7 +28,8 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		LoginService loginService = new LoginService(request, response);
+		loginService.handleGetLogin();
 	}
 
 	/**
