@@ -37,8 +37,8 @@
                     <label for="admin">Admin</label>
                 </div>
                 <div class="login__form-userpass">
-                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
-                    <input type="password" name="password" id="password" placeholder="Mật khẩu">
+                    <input type="text" name="username" id="username" value="${username}" placeholder="Tên đăng nhập">
+                    <input type="password" name="password" id="password" value="${password}" placeholder="Mật khẩu">
                 </div>
                 <input type="submit" value="Join Now">
             </form>

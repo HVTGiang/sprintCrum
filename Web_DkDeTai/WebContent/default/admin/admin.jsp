@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý đề tài | Giảng viên</title>
+    <title>Quản lý đề tài | Admin</title>
 
     <!-- logo title -->
     <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
@@ -24,9 +24,9 @@
     <!-- Header -->
     <!--<div id="header"></div>
     script src="./asset/script/header-import.js"></script>-->
-    <jsp:include page="../default/header/header.jsp" />
+    <jsp:include page="../header/header.jsp" />
 
-    <!-- Content --> 
+    <!-- Content -->
     <div class="content">
         <!-- Menu -->
         <div class="content__menu">
@@ -35,21 +35,27 @@
             </div>
             <ul class="menu__nav">
                 <li>
-                    <a href="">
+                    <a href="./make-schedule.html">
                         <i class="fa-solid fa-circle-plus"></i>
-                        Thông tin cá nhân
+                        Tạo đợt đăng kí
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <i class="fa-solid fa-users"></i>
-                        Đăng ký đề tài
+                        Tạo hội đồng
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <i class="fa-solid fa-circle-info"></i>
-                        Chấm điểm đề tài
+                        Thông tin cá nhân
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+                        Quản lý tài khoản
                     </a>
                 </li>
             </ul>
@@ -68,7 +74,7 @@
         </div>
     </div>
 
-    <include src="./footer.html"></include>
+   <jsp:include page="../footer/footer.jsp" />
     <!-- Footer -->
     <!--<div id="footer"></div>
     <script src="./asset/script/footer-import.js"></script>-->
