@@ -32,6 +32,7 @@ public class Topic implements Serializable {
 	@Column(name="student_id")
 	private String studentId;
 
+	@Id
 	@Column(name="topic_id")
 	private String topicId;
 

@@ -14,7 +14,8 @@ public class Major implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String description;
-
+	
+	@Id
 	@Column(name="major_id")
 	private String majorId;
 

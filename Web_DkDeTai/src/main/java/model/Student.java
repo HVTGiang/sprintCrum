@@ -22,6 +22,7 @@ public class Student implements Serializable {
 	@Column(name="school_year")
 	private String schoolYear;
 
+	@Id
 	@Column(name="student_id")
 	private String studentId;
 

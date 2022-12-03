@@ -9,13 +9,15 @@ import javax.persistence.*;
  * 
  */
 @Entity
+@Table(name="lecturer")
 @NamedQuery(name="Lecturer.findAll", query="SELECT l FROM Lecturer l")
 public class Lecturer implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="is_head")
 	private byte isHead;
-
+	
+	@Id
 	@Column(name="lecturer_id")
 	private String lecturerId;
 
