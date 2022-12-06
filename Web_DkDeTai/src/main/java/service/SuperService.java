@@ -2,6 +2,7 @@ package service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,15 +16,16 @@ public class SuperService {
     this.request = request;
     this.response = response;
   }
-
-public void setEncoding(String env) throws UnsupportedEncodingException {
-    this.request.setCharacterEncoding(env);
-    this.response.setCharacterEncoding(env);
-  }
+  
+  protected void setEncoding() throws UnsupportedEncodingException {
+		this.request.setCharacterEncoding("UTF-8");
+		this.response.setCharacterEncoding("UTF-8");
+	}
+  public SuperService() {}
 
   public void forwardToPage(String url) throws ServletException, IOException {
-    this.request.getRequestDispatcher(url).forward(request, response);
-    ;
+	  this.setEncoding();
+	  this.request.getRequestDispatcher(url).forward(request, response);
   }
 
 //  Redirect to url Pattern
