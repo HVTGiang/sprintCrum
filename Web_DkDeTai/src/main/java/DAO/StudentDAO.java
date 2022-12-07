@@ -45,4 +45,16 @@ public class StudentDAO extends JpaUtils<Student> implements GenericDAO<Student>
 	public String randomId() {
 		return super.randomId("ST");
 	}
+
+	@Override
+	public List<Student> pagination(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

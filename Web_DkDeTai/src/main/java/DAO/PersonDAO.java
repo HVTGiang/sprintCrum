@@ -45,4 +45,16 @@ public class PersonDAO extends JpaUtils<Person> implements GenericDAO<Person>{
 	public String randomId() {
 		return super.randomId("PE");
 	}
+
+	@Override
+	public List<Person> pagination(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

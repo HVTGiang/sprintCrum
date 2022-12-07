@@ -45,4 +45,16 @@ public class AccountDAO extends JpaUtils<Account> implements GenericDAO<Account>
 	public String randomId() {
 		return super.randomId("AC");
 	}
+
+	@Override
+	public List<Account> pagination(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

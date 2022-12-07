@@ -44,4 +44,16 @@ public class LecturerDAO extends JpaUtils<Lecturer> implements GenericDAO<Lectur
 	public String randomId() {
 		return super.randomId("LE");
 	}
+
+	@Override
+	public List<Lecturer> pagination(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
