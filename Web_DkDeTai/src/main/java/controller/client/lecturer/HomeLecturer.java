@@ -1,4 +1,5 @@
-package controller.client.authenticate;
+package controller.client.lecturer;
+
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,29 +8,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import service.LoginService;
+import service.HomeService;
 
-/**
- * Servlet implementation class LoginController
- */
-@WebServlet("/login")
-public class LoginAuthenticate extends HttpServlet {
+@WebServlet("/lecturer/home")
+public class HomeLecturer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
     
-    public LoginAuthenticate() {
+    public HomeLecturer() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
+
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		LoginService loginService = new LoginService(request, response);
-		loginService.handleGetLogin();
+		HomeService home = new HomeService(request, response);
+		home.handleGetTeacherHomeService();
 	}
+
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		LoginService loginService = new LoginService(request, response);
-		loginService.handlePostLogin();
-		
+		doGet(request, response);
 	}
 
 }

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <% String context = request.getContextPath(); request.setCharacterEncoding("utf-8"); %>
@@ -27,13 +27,13 @@
             <div class="login__header"><h3>ĐĂNG NHẬP</h3></div>
             <form class = "login__form" action="<%=context%>/login" method="POST">
                 <div class="login__form-position">
-                    <input type="radio" name="position_choice" id="sinhvien" value="Sinh viên">
+                    <input type="radio" name="position_choice" id="sinhvien" value="student">
                     <label for="sinhvien">Sinh viên</label>
-                    <input type="radio" name="position_choice" id="giangvien" value="Giảng viên">
+                    <input type="radio" name="position_choice" id="giangvien" value="lecturer">
                     <label for="giangvien">Giảng viên</label>
-                    <input type="radio" name="position_choice" id="truongbomon" value="Trưởng bộ môn">
+                    <input type="radio" name="position_choice" id="truongbomon" value="head_lecturer">
                     <label for="truongbomon">Trưởng môn</label>
-                    <input type="radio" name="position_choice" id="admin" value="Admin">
+                    <input type="radio" name="position_choice" id="admin" value="admin">
                     <label for="admin">Admin</label>
                 </div>
                 <div class="login__form-userpass">
