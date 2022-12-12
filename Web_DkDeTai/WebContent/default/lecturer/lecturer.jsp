@@ -12,10 +12,10 @@
     <title>Quản lý đề tài | Giảng viên</title>
 
     <!-- logo title -->
-    <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
+    <link rel="icon" href="../asset/img/fit-logo.png" type="image/icon type">
     <!-- CSS -->
-    <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="../asset/css/base.css">
+    <link rel="stylesheet" href="../asset/css/main.css">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
     <!-- Add html khác -->
