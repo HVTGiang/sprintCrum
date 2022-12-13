@@ -11,10 +11,10 @@
     <title>Login</title>
     
     <!-- logo title -->
-    <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
+    <link rel="icon" href="${pageContext.request.contextPath}/asset/img/fit-logo.png" type="image/icon type">
     <!-- CSS -->
-    <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/login-styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/login-styles.css">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
     <!-- Add html khác -->
@@ -38,8 +38,8 @@
                     <label for="admin">Admin</label>
                 </div>
                 <div class="login__form-userpass">
-                    <input type="text" name="username" id="username" value="${username}" placeholder="Tên đăng nhập">
-                    <input type="password" name="password" id="password" value="${password}" placeholder="Mật khẩu">
+                    <input type="text" name="username" id="username" value="${username}">
+                    <input type="password" name="password" id="password" value="${password}">
                 </div>
                 <input type="submit" value="Join Now">
             </form>

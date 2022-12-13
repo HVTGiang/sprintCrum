@@ -23,13 +23,13 @@ public class LoginAuthenticate extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		LoginService loginService = new LoginService(request, response);
-		loginService.handleGetLogin();
+		loginService.GetLogin();
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		 //doGet(request, response);
 		LoginService loginService = new LoginService(request, response);
-		loginService.handlePostLogin();
-		
+		loginService.PostLogin();
 	}
 
 }

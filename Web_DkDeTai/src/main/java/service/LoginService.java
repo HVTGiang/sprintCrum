@@ -26,9 +26,10 @@ public class LoginService extends SuperService{
 	private Account getAccount(String username) {
 		AccountDAO ad = new AccountDAO();
 		List<Account> listAccounts = ad.findAll();
-		for (Account acc : listAccounts) {
-			if (username.equals(acc.getUsername())) {
-				return acc;
+		for (Account a : listAccounts) {
+			if (username.equals(a.getUsername())) {
+				System.out.print(a);
+				return a;
 			}
 		}
 		return null;
@@ -40,42 +41,42 @@ public class LoginService extends SuperService{
 		}
 		return false;
 	}
-	public void handleGetLogin() throws ServletException, IOException {
+	public void GetLogin() throws ServletException, IOException {
 		String url = "/default/login.jsp";
 		super.forwardToPage(url);
 	}
-	public void handlePostLogin() throws ServletException, IOException {
+	
+	public void PostLogin() throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		try {
 			// define default url
 			String url = "/default/login.jsp";
 			String errorMessage = "";
 			
-			System.out.print("Login success");
+			System.out.print("0");
 
 			// get parameters from login box
 			String role = this.request.getParameter("position_choice");
 			String username = this.request.getParameter("username");
 			String password = this.request.getParameter("password");
-			
+			System.out.print(username);
 
 			// find account and user
 			Account foundAccount = getAccount(username);
+			System.out.print("1");
 
 			// find Person
 			Person person = null;
 			if (foundAccount != null) {
 				person = foundAccount.getPerson();
-				System.out.print("Login success");
+				System.out.print("found person");
 			}
 			// check if this account is existing
 			if (foundAccount != null && checkRole(role, person)) {
 				if (password.equals(foundAccount.getPassword())) {
 					
 					// define user id cookie timeout 30'
-					Cookie c = new Cookie("useridcookie", person.getPersonId());
-				
-					// 30 min
+					Cookie c = new Cookie("unameidcookie", person.getPersonId());
 					c.setMaxAge(30 * 60);
 					c.setPath("/");
 					this.response.addCookie(c);
@@ -95,7 +96,7 @@ public class LoginService extends SuperService{
 					}
 						else if (role.equals("head_lecturer")) {
 							// forward to admin home page
-							url = "/headLecturer/home";
+							url = "/head-lecturer/home";
 					}
 					
 
