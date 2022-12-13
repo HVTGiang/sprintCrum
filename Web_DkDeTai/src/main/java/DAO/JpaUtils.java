@@ -20,6 +20,9 @@ public class JpaUtils<T> {
 		String connectionString = "Web_DkDeTai";
 		this.entityManagerFactory = Persistence.createEntityManagerFactory(connectionString);
 	}
+	public EntityManagerFactory getEntityManagerFactory() {
+		return entityManagerFactory;
+	}
 
 	public EntityManager getEntityManager() {
 		return entityManagerFactory.createEntityManager();
