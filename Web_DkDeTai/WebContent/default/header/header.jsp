@@ -22,7 +22,6 @@
     <header class="header">
         <div class="header__container">
             <div class="header__container--left">
-                <img src="../asset/img/UTE.png" alt="HCMUTE logo" class="header__container-logo">
                 <img src="${pageContext.request.contextPath}/asset/img/UTE.png" alt="HCMUTE logo" class="header__container-logo">
                 <div class="header__container-content">
                     <h1 class="header__container-content-VNName">
