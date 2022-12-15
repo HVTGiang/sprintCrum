@@ -20,7 +20,7 @@ public class AdminService extends SuperService{
 	public static Admin getAdminByPerson(Person person) {
 		Admin pAdmin = null;
 		Map<String, Object> maping = new HashMap<String, Object>();
-		maping.put("p", person);
+		maping.put("id", person.getPersonId());
 		if (AdminDAO.findWithNamedQuery("Admin.findAdminByPerson", maping).size() >0 )
 		{
 			pAdmin = AdminDAO.findWithNamedQuery("Admin.findAdminByPerson", maping).get(0);

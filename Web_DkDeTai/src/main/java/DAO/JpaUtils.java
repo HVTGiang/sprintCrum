@@ -12,6 +12,7 @@ import javax.persistence.Query;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
+
 public class JpaUtils<T> {
 
 	private EntityManagerFactory entityManagerFactory;
@@ -116,5 +117,17 @@ public class JpaUtils<T> {
 	public String randomId (String type) {
 		String id = type + RandomStringUtils.randomNumeric(8);
 		return id;
+	}
+
+	public List<T> findbyName(String queryName, Map<String, Object> parameters) {
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		Query query = entityManager.createNamedQuery(queryName);
+		Set<Entry<String, Object>> setParameters = parameters.entrySet();
+		for (Entry<String, Object> entry : setParameters) {
+			query.setParameter(entry.getKey(), entry.getValue());
+		}
+		List<T> result = query.getResultList();
+		entityManager.close();
+		return result;
 	}
 }

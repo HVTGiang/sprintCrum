@@ -1,0 +1,49 @@
+.input-form {
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+}
+
+.input-text-box {
+    width: 40rem;
+    border: none;
+    border-bottom: 1px solid var(--blue-color);
+    transition: 0.3s;
+    margin-right: 12px;
+    font-size: 1.6rem;
+    font-family: 'Inner', sans-serif;
+}
+
+.input-text-box:focus-visible {
+    border: none;
+    border-bottom: 2px solid var(--blue-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-text-box::placeholder {
+    color: var(--blue-color);
+    opacity: 70%;
+}
+
+.input-label {
+    color: var(--blue-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.input-value {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.add-button {
+    border: none;
+    margin-right: 0.8rem;
+}
+
+.red-color {
+    background-color: var(--red-color);
+}

@@ -34,14 +34,14 @@ script src="./asset/script/header-import.js"></script>-->
                 <h3>Danh mục</h3>
             </div>
             <ul class="menu__nav">
-                <li class="selected">
-                    <a href="#">
+                <li class="">
+                    <a href="">
                         <i class="fa-solid fa-circle-plus"></i>
                         Quản lý đợt đăng ký
                     </a>
                 </li>
-                <li>
-                    <a href="">
+                <li class="selected">
+                    <a href="${pageContext.request.contextPath}/admin/committee">
                         <i class="fa-solid fa-users"></i>
                         Quản lý hội đồng
                     </a>
@@ -69,22 +69,39 @@ script src="./asset/script/header-import.js"></script>-->
                     <span>Trang chủ</span>
                 </a>
                 <span class="breadcumb-item"> > </span>
-                <span>Đợt đăng ký</span>
+                <span>Quản lý hội đồng</span>
             </p>
         </div>
+
+        <c:if test="${not empty message}">
+            <div id="message-box"
+                 style="display: flex;
+                        padding: 12px;
+                        justify-content: space-between;
+                        background-color: var(--light__blue-color);
+                        margin-bottom: 16px;"
+            >
+                <p style="color: var(--orange-color)">
+                        ${message}
+                </p>
+                <span id="close-message-button"><i class="fa-solid fa-xmark"
+                                                   style="color: var(--orange-color);"></i></span>
+            </div>
+        </c:if>
 
         <%--Action zone--%>
         <div id="action-zone">
             <%--Add button--%>
             <div class="add-button">
                 <i class="fa-solid fa-circle-plus"></i>
-                <a href="">Tạo đợt</a>
+                <a href="/admin/committee?action=insert">Tạo đợt</a>
             </div>
             <%--Find button--%>
             <div class="find-zone">
-                <form action="">
+                <form action="/admin/committee" method="get">
                     <%--                    <label for="">Tìm kiếm</label>--%>
-                    <input type="text" placeholder="Nhập tên hội đồng" class="find-text-box">
+                    <input type="text" placeholder="Nhập tên hội đồng" class="find-text-box" name="find">
+                    <input type="hidden" value="find" name="action">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
@@ -95,54 +112,62 @@ script src="./asset/script/header-import.js"></script>-->
         <div id="content-notify">
             <div id="content-notify-header">
                 <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                <p>Danh sách đợt đăng ký</p>
+                <p>Danh sách hội đồng</p>
             </div>
             <div id="content-notity-data-list">
 
                 <%-- Data table--%>
-                <table class="datatable">
+                <c:if test="${not empty committeList}">
+                    <table class="datatable">
 
-                    <%-- Table header--%>
-                    <thead>
-                    <tr class="center-data align-item-center">
-                        <th scope="col" class="center-cell witdh-column-5rem">#</th>
-                        <th scope="col" class="center-cell">Tên hội đồng</th>
-                        <th scope="col" class="center-cell witdh-column-10rem">Số thành viên</th>
-                        <th scope="col" class="witdh-column-27rem center-cell">Mô tả</th>
-                        <th scope="col" class="center-cell">Lựa chọn</th>
-                    </tr>
-                    </thead>
-                    <%--End table header--%>
+                            <%-- Table header--%>
+                        <thead>
+                        <tr class="center-data align-item-center">
+                            <th scope="col" class="center-cell witdh-column-5rem">#</th>
+                            <th scope="col" class="center-cell">Tên hội đồng</th>
+                            <th scope="col" class="center-cell witdh-column-10rem">Số thành viên</th>
+                            <th scope="col" class="witdh-column-27rem center-cell">Mô tả</th>
+                            <th scope="col" class="center-cell">Lựa chọn</th>
+                        </tr>
+                        </thead>
+                            <%--End table header--%>
 
-                    <%-- Table body--%>
-                    <tbody>
-                    <c:if test="${not empty committeList}">
+                            <%-- Table body--%>
+                        <tbody>
+
                         <c:forEach items="${committeList}" var="c">
                             <tr class="center-data data-row">
                                 <th scope="row" class="center-cell witdh-column-5rem"><a href="#">1</a></th>
-                                <td class="center-cell"><a href="">${c.committeName}</a></td>
+                                <td class="justify-cell"><a href="">${c.committeName}</a></td>
                                 <td class="center-cell witdh-column-10rem">${c.numMember}</td>
                                 <td colspan="1" class="witdh-column-27rem justify-cell">
-                                    ${c.description}
+                                        ${c.description}
                                 </td>
                                 <td class="center-cell">
-                                    <a href=""
+                                    <a href="/admin/committee?action=edit&committeeId=${c.committeId}"
                                        class="btn btn-primary edit-button action-column-element">Sửa</a>
                                     <form action="" method="post">
                                         <input class="delete-button action-column-element" type="submit"
                                                value="Xóa"
-                                               onclick="if (confirm('Bạn có chắc chắn muốn xóa hội đồng này?')) { form.action='/admin/book'; } else { return false; }"/>
+                                               onclick="if (confirm('Bạn có chắc chắn muốn xóa hội đồng này?')) { form.action=''; } else { return false; }"/>
                                     </form>
                                 </td>
                             </tr>
                         </c:forEach>
-                    </c:if>
 
-                    </tbody>
-                    <%--End table body--%>
 
-                </table>
-                <%--End data table--%>
+                        </tbody>
+                            <%--End table body--%>
+
+                    </table>
+                    <%--End data table--%>
+                </c:if>
+
+                <c:if test="${empty committeList}">
+                    <div style="text-align: center; padding: 25px; color: var(--blue-color)">
+                        Chưa có hội đồng
+                    </div>
+                </c:if>
             </div>
         </div>
     </div>
@@ -154,6 +179,15 @@ script src="./asset/script/header-import.js"></script>-->
 <!-- Footer -->
 <!--<div id="footer"></div>
 <script src="./asset/script/footer-import.js"></script>-->
+<script>
+
+    document.getElementById('close-message-button').addEventListener('click', (e) => {
+        let parentElm = e.target.closest('#message-box')
+        parentElm.remove()
+    })
+
+</script>
+
 </body>
 
 </html>

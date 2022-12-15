@@ -10,35 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5d2b4b-c143-455f-b910-9bbf9076f5e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/asset/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/committee.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/css/committee.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/CommitteeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminCommiteeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/asset/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/asset/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/asset/css/header-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/asset/css/header-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/asset/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/asset/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/asset/img/Banner_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/asset/img/Banner_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/committee-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/css/committee-form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/CommitteeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/default/admin/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/default/admin/committee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/committee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/default/admin/css/committee.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/css/committee.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/default/header/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/header/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/default/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/default/student/student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/student/student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/JpaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/JpaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminCommiteeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminCommiteeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/client/admin/HomeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/HomeAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AdminFilterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AdminFilterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/LecturerCommitte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LecturerCommitte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/HomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/HomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AccountFilterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AccountFilterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Committe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Committe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/Web_DkDeTai/Web_DkDeTai/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/Web_DkDeTai/Web_DkDeTai/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -80,7 +73,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/SPKT/Junior/First Term/CNPM/sprintCrum/Web_DkDeTai/WebContent/META-INF"
+    "last_opened_file_path": "E:/SPKT/Junior/First Term/CNPM/sprintCrum/Web_DkDeTai/WebContent/META-INF",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -102,7 +97,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="18" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Web_DkDeTai:war exploded">
           <settings>
@@ -197,7 +191,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671086050602</updated>
-      <workItem from="1671086053994" duration="3857000" />
+      <workItem from="1671086053994" duration="16427000" />
+      <workItem from="1671119397591" duration="15061000" />
     </task>
     <servers />
   </component>

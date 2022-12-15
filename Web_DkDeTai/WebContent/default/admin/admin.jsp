@@ -37,13 +37,13 @@ script src="./asset/script/header-import.js"></script>-->
             </div>
             <ul class="menu__nav">
                 <li>
-                    <a href="#">
+                    <a href="">
                         <i class="fa-solid fa-circle-plus"></i>
                         Quản lý đợt đăng ký
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="${pageContext.request.contextPath}/admin/committee">
                         <i class="fa-solid fa-users"></i>
                         Quản lý hội đồng
                     </a>
