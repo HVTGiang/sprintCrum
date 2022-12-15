@@ -14,7 +14,7 @@
     <link rel="icon" href="${pageContext.request.contextPath}/asset/img/fit-logo.png">
     <!-- CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/base.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/main.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/default/admin/css/main.css" type="text/css">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
     <!-- Add html khác -->

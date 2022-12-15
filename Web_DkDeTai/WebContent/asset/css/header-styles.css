@@ -1,103 +1,171 @@
-/* usual class */
-.mr-left-1rem{
-    margin-left: 1rem;
-}
-/* Header: begin */
-.header{
-    width: auto;
-    height: 19rem;
-    left: 0px;
-    top: 0px;
-}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* header__container:begin */
-.header__container{
-    height: 14rem;
-    width: 100%;
+#header-container {
+    height: 150px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    padding: 1rem 10rem;
-    background-color: var(--light__blue-color);
+    justify-content: space-between;
 }
 
-.header__container--left{
+#header-content {
+    width: 609px;
+    height: 112px;
+    margin-left: 40px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header__container--right{
+#header-img {
+    width: 530px;
     height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.header__container--right img{
-    width: auto;
-    height: 13rem;
+#header-img img {
+    position: absolute;
+    width: 587px;
+    height: 286px;
     left: -41px;
-    right: 0;
-    object-fit: fill;
+    top: 7px;
 }
 
-
-.header__container-logo{
+#header-content img {
     width: 77px;
     height: 97px;
+    margin-left: 3px;
 }
 
-.header__container-content{
-    min-height: 97px; /* Làm cho chiều cao bằng với logo*/
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+#header-content #header-text {
+    margin-right: 31px;
 }
 
-.header__container-content-VNName{
-    line-height: 2.4rem;
-    display: block;
-    margin: 0; 
+#title-vi {
+    font-size: 20px;
+    font-family: 'Inner', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
     color: var(--blue-color);
 }
 
-.header__container-content-EnglishName{
-    display: block;
-    margin: 0;
+#title-en {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--black-color);
 }
 
-.header__container-content-line{
-    display: block;
-    margin: 0;
-    transform: translateY(-50%); /* Làm cho dòng gạch chân về giữa */
-}
-
-.header__container-content-departmentName{
-    display: block;
-    margin: 0;
+#header-text #sub-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
     color: var(--red-color);
 }
-/* header__container: end */
 
-/* header__nav: begin */
-.header__nav{
-    height: 5rem;
+#header-text hr {
+    background-color: var(--black-color);
+}
+
+#header-nav {
+    height: 40px;
+    width: 100%;
+    background-color: var(--blue-color);
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
     align-items: center;
-    padding: 0 4rem;
-    font-size: 1.6rem;
-    background-color: var(--blue-color);
-    border: 0.1rem solid #000;
-}
-.header__nav-home,
-.header__nav-login{
-    display: inline-block;
+    justify-content: space-between;
 }
 
-.header__nav-icon,
-.header__nav-text{
-    display: inline-block;
+#header-nav a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#header-home:hover{
+    background-color: var(--light__blue-color);
+    color: var(--blue-color);
+    height: 40px;
+    transition: 0.3s;
+}
+#header-home:hover p{
+    /*background-color: var(--light__blue-color);*/
+    color: var(--blue-color);
+    transition: 0.3s;
+}
+
+#header-home:hover i{
+    /*background-color: var(--light__blue-color);*/
+    color: var(--blue-color);
+    transition: 0.3s;
+}
+
+#header-login:hover{
+    background-color: var(--light__blue-color);
+    color: var(--blue-color);
+    height: 40px;
+    transition: 0.3s;
+}
+#header-login:hover p{
+    /*background-color: var(--light__blue-color);*/
+    color: var(--blue-color);
+    transition: 0.3s;
+}
+
+#header-login:hover i{
+    /*background-color: var(--light__blue-color);*/
+    color: var(--blue-color);
+    transition: 0.3s;
+}
+
+#header-nav #header-home {
+    padding:0px 4px ;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 100%;
+    transition: 0.3s;
 }
-/* header__nav: end */
 
-/* Header: END */
+#header-nav #header-login {
+    padding:0px 4px ;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 19px;
+    transition: 0.3s;
+}
+
+#header-login i, #header-login p, #header-home i, #header-home p{
+    transition: 0.3s;
+}

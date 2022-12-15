@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
- <%
-request.setCharacterEncoding("utf-8");
-String context = request.getContextPath();
-String baseUrl = request.getContextPath() + "/default/home";
+         pageEncoding="UTF-8"%>
+
+<%
+    request.setCharacterEncoding("utf-8");
+    String context = request.getContextPath();
+    String baseUrl = request.getContextPath() + "/default/home";
 %>
 
 <!DOCTYPE html>
@@ -16,10 +16,10 @@ String baseUrl = request.getContextPath() + "/default/home";
     <title>Trang chủ</title>
 
     <!-- logo title -->
-    <link rel="icon" href="./asset/img/fit-logo.png" type="image/icon type">
+    <link rel="icon" href="/asset/img/fit-logo.png" type="image/icon type">
     <!-- CSS -->
-    <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="/asset/css/base.css">
+    <link rel="stylesheet" href="/asset/css/main.css">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
     <!-- Add html khác -->
@@ -27,10 +27,10 @@ String baseUrl = request.getContextPath() + "/default/home";
 </head>
 <body>
 <div id="app">
-    <jsp:include page="./header/header.jsp" />
+    <jsp:include page="/default/header/header.jsp" />
     <div class="content">
         <div class="content__menu">
-            <div class="menu__header"><h3>Danh mục</h3></div>          
+            <div class="menu__header"><h3>Danh mục</h3></div>
             <ul class="menu__nav">
                 <li>
                     <a href="">
@@ -90,7 +90,7 @@ String baseUrl = request.getContextPath() + "/default/home";
             </div>
         </div>
     </div>
-    <jsp:include page="./footer/footer.jsp" />
-    </div>
+    <jsp:include page="/default/footer/footer.jsp" />
+</div>
 </body>
 </html>

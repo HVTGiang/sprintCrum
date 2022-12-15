@@ -19,7 +19,7 @@ public class LecturerCommitte implements Serializable {
 
 	//bi-directional many-to-one association to Committe
 	@ManyToOne
-	@JoinColumn(name="committe_id")
+	@JoinColumn(name="committe_id", insertable = false, updatable = false)
 	private Committe committe;
 
 	public LecturerCommitte() {

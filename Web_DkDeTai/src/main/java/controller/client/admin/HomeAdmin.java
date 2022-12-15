@@ -9,25 +9,34 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.HomeService;
 
-@WebServlet("/admin/home")
+@WebServlet(value = "/admin/home", name = "HomeAdmin")
 public class HomeAdmin extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    
+    private static final long serialVersionUID = 1L;
+
+
     public HomeAdmin() {
         super();
-        
     }
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HomeService home = new HomeService(request, response);
-		home.handleGetAdminHomeService();
-	}
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+        /*Cái này là gọi cái dịch vụ home ra để chuyển đến trang home của từng role*/
+        HomeService home = new HomeService(request, response);
+        /*Chuyển đến trên home của admin*/
+        home.handleGetAdminHomeService();
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
+    /*Hàm load thông tin cho trang chủ admin*/
+    private void getInfoForAdminHomePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /*Chỗ này sẽ lấy các thông tin cần hiển thị lên trên home page của admin*/
+    }
 
 }
