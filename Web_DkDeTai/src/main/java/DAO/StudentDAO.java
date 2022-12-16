@@ -1,9 +1,9 @@
 package DAO;
 
+import model.Student;
+
 import java.util.List;
 import java.util.Map;
-
-import model.Student;
 
 public class StudentDAO extends JpaUtils<Student> implements GenericDAO<Student>{
 	public StudentDAO() {

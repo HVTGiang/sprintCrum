@@ -36,6 +36,12 @@ script src="./asset/script/header-import.js"></script>-->
                 <h3>Danh mục</h3>
             </div>
             <ul class="menu__nav">
+                <li class="selected">
+                    <a href="${pageContext.request.contextPath}/admin">
+                        <i class="fa-solid fa-house"></i>
+                        Trang chủ
+                    </a>
+                </li>
                 <li>
                     <a href="">
                         <i class="fa-solid fa-circle-plus"></i>
@@ -55,7 +61,7 @@ script src="./asset/script/header-import.js"></script>-->
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="${pageContext.request.contextPath}/admin/account">
                         <i class="fa-solid fa-user"></i>
                         Quản lý tài khoản
                     </a>

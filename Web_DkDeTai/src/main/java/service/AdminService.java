@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.AdminDAO;
-import model.Person;
 import model.Admin;
+import model.Person;
 
 public class AdminService extends SuperService{
-	private static AdminDAO AdminDAO = new AdminDAO();
+	private static final AdminDAO AdminDAO = new AdminDAO();
 
 	public AdminService(HttpServletRequest request, HttpServletResponse response) {
 		super(request, response);
@@ -20,7 +20,7 @@ public class AdminService extends SuperService{
 	public static Admin getAdminByPerson(Person person) {
 		Admin pAdmin = null;
 		Map<String, Object> maping = new HashMap<String, Object>();
-		maping.put("id", person.getPersonId());
+		maping.put("person", person);
 		if (AdminDAO.findWithNamedQuery("Admin.findAdminByPerson", maping).size() >0 )
 		{
 			pAdmin = AdminDAO.findWithNamedQuery("Admin.findAdminByPerson", maping).get(0);

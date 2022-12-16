@@ -1,43 +1,43 @@
 package DAO;
 
+import model.Headlecturer;
+
 import java.util.List;
 import java.util.Map;
 
-import model.HeadLecturer;
-
-public class HeadLecturerDAO extends JpaUtils<HeadLecturer> implements GenericDAO<HeadLecturer>{
+public class HeadLecturerDAO extends JpaUtils<Headlecturer> implements GenericDAO<Headlecturer>{
 	public  HeadLecturerDAO() {
 		super();
 	}
 	
 	@Override
-	public  HeadLecturer create( HeadLecturer entity) {
+	public  Headlecturer create( Headlecturer entity) {
 		return super.create(entity);
 	}
 	
 	@Override
-	public  HeadLecturer update( HeadLecturer entity) {
+	public  Headlecturer update( Headlecturer entity) {
 		return super.update(entity);
 	}
 	
 	@Override
 	public void delete(Object id) {
-		super.delete( HeadLecturer.class, id);
+		super.delete( Headlecturer.class, id);
 	}
 	
 	@Override
-	public HeadLecturer find(Object primaryKey) {
-		return super.find(HeadLecturer.class, primaryKey);
+	public Headlecturer find(Object primaryKey) {
+		return super.find(Headlecturer.class, primaryKey);
 	}
 	
 	@Override
-	public List<HeadLecturer> findAll(){
+	public List<Headlecturer> findAll(){
 		String queryName = "HeadLecturer.findAll";
-		return super.findAll(queryName, HeadLecturer.class);
+		return super.findAll(queryName, Headlecturer.class);
 	}
 	
 	@Override
-	public List<HeadLecturer> findWithNamedQuery(String queryName, Map<String, Object> parameters) {
+	public List<Headlecturer> findWithNamedQuery(String queryName, Map<String, Object> parameters) {
 		return super.findWithNamedQuery(queryName, parameters);
 	}
 
@@ -47,7 +47,7 @@ public class HeadLecturerDAO extends JpaUtils<HeadLecturer> implements GenericDA
 	}
 
 	@Override
-	public List<HeadLecturer> pagination(int currentPage, int pageSize) {
+	public List<Headlecturer> pagination(int currentPage, int pageSize) {
 		// TODO Auto-generated method stub
 		return null;
 	}

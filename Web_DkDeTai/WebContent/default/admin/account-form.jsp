@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/asset/css/reset.css">
     <link rel="stylesheet" href="/asset/css/base.css">
     <link rel="stylesheet" href="<c:url value = "/default/admin/css/committee.css"/>">
-    <link rel="stylesheet" href="<c:url value = "/default/admin/css/committee-form.css"/>">
+    <link rel="stylesheet" href="<c:url value = "/default/admin/css/account-form.css"/>">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
 </head>
@@ -47,8 +47,8 @@ script src="./asset/script/header-import.js"></script>-->
                         Quản lý đợt đăng ký
                     </a>
                 </li>
-                <li class="selected">
-                    <a href="${pageContext.request.contextPath}/admin/committee" >
+                <li class="">
+                    <a href="${pageContext.request.contextPath}/admin/committee">
                         <i class="fa-solid fa-users"></i>
                         Quản lý hội đồng
                     </a>
@@ -59,7 +59,7 @@ script src="./asset/script/header-import.js"></script>-->
                         Thông tin cá nhân
                     </a>
                 </li>
-                <li>
+                <li class="selected">
                     <a href="${pageContext.request.contextPath}/admin/account">
                         <i class="fa-solid fa-user"></i>
                         Quản lý tài khoản
@@ -76,7 +76,7 @@ script src="./asset/script/header-import.js"></script>-->
                     <span>Trang chủ</span>
                 </a>
                 <span class="breadcumb-item"> > </span>
-                <span>Quản lý hội đồng</span>
+                <span>Quản lý tài khoản</span>
             </p>
         </div>
         <c:if test="${not empty message}">
@@ -88,9 +88,10 @@ script src="./asset/script/header-import.js"></script>-->
                         margin-bottom: 16px;"
             >
                 <p style="color: var(--orange-color)">
-                    ${message}
+                        ${message}
                 </p>
-                <span id="close-message-button"><i class="fa-solid fa-xmark" style="color: var(--orange-color);"></i></span>
+                <span id="close-message-button"><i class="fa-solid fa-xmark"
+                                                   style="color: var(--orange-color);"></i></span>
             </div>
         </c:if>
         <%--&lt;%&ndash;Action zone&ndash;%&gt;
@@ -115,35 +116,75 @@ script src="./asset/script/header-import.js"></script>-->
         <div id="content-notify">
             <div id="content-notify-header">
                 <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                <p>${action.equals("insert")?"Tạo hội đồng":"Chỉnh sửa hội đồng"}</p>
+                <p>${action.equals("insert")?"Thêm tài khoản":"Chi tiết tài khoản"}</p>
             </div>
             <div id="content-notity-data-list">
 
-                <form action="${pageContext.request.contextPath}/admin/committee" method="post" class="input-form">
+                <form action="${pageContext.request.contextPath}/admin/account" method="post" class="input-form">
                     <div class="input-value">
-                        <label class="input-label">Tên hội đồng</label>
-                        <input type="text" name="committeeName" class="input-text-box"
-                               value="${committee.committeName}">
+                        <label class="input-label">Họ tên</label>
+                        <input type="text" name="accountFullName" class="input-text-box"
+                               value="${account.person.fullName}" ${action.equals("insert")?"required":"readonly"}>
+
                     </div>
                     <div class="input-value">
-                        <label class="input-label">Số lượng thành viên</label>
-                        <input type="number" name="committeeNumber" class="input-text-box"
-                               value="${committee.numMember}">
+                        <label class="input-label">Username</label>
+                        <input type="text" name="accountUsername" class="input-text-box"
+                               value="${account.username}" ${action.equals("insert")?"required":"readonly"}>
+
                     </div>
                     <div class="input-value">
-                        <label class="input-label">Mô tả hội đồng</label>
-                        <textarea type="number" name="description" class="input-text-box"
-                                  data-value="">${committee.description}</textarea>
+                        <label class="input-label">Password</label>
+                        <input type="text" name="accountPassword" class="input-text-box"
+                               value="${account.password}" ${action.equals("insert")?"required":"readonly"}>
+
                     </div>
                     <div class="input-value">
-                        <label class="input-label">Ngày báo cáo</label>
-                        <input type="date" name="committeeReportDate" class="input-text-box"
-                               value="${committee.reportDate}">
+                        <label class="input-label">Giới tính</label>
+                        <div class="input-value-row">
+                            <div style="margin-right: 4rem;">
+                                <span>Nam</span>
+                                <input type="radio" name="accountGender"
+                                       class="" ${account.person.gender==1?"checked":""} checked value="male" ${action.equals("insert")?"":"disabled"}>
+                            </div>
+                            <div>
+                                <span>Nữ</span>
+                                <input type="radio" name="accountGender"
+                                       class="" ${account.person.gender==0?"checked":""} value="female" ${action.equals("insert")?"":"disabled"}>
+                            </div>
+                        </div>
                     </div>
-                    <a href="${pageContext.request.contextPath}/admin/committee" class="add-button red-color">Hủy</a>
+                    <div class="input-value">
+                        <label class="input-label">Số điện thoại</label>
+                        <input type="text" name="accountPhone" class="input-text-box"
+                               value="${account.person.phonenumber}" ${action.equals("insert")?"required":"readonly"}>
+                    </div>
+                    <div class="input-value">
+                        <label class="input-label">Email</label>
+                        <input type="email" name="accountEmail" class="input-text-box"
+                               value="${account.person.email}" ${action.equals("insert")?"required":"readonly"}>
+                    </div>
+                    <div class="input-value">
+                        <label class="input-label">Vai trò</label>
+                        <select type="date" name="accountRole" class="input-text-box"
+                                value="${account.person.role}" ${action.equals("insert")?"":"disabled"}>
+                            <option value="admin">Admin</option>
+                            <option value="head_lecturer">Trưởng bộ môn</option>
+                            <option value="lecturer">Giảng viên</option>
+                            <option value="student" selected>Sinh viên</option>
+                        </select>
+                    </div>
+                    <div class="input-value">
+                        <label class="input-label">Địa chỉ</label>
+                        <input type="text" name="accountAddress" class="input-text-box"
+                               value="${account.person.address}" ${action.equals("insert")?"":"readonly"}>
+                    </div>
+                    <a href="${pageContext.request.contextPath}/admin/account"
+                       class="add-button red-color">${action.equals("insert")?"Hủy":"OK"}</a>
                     <input type="hidden" name="action" value="save">
-                    <input type="hidden" name="committeeId" value="${committee.committeId}">
-                    <input type="submit" class="add-button" value="Lưu">
+                    <%--<input type="hidden" name="committeeId" value="${committee.committeId}">--%>
+                    <input type="submit" class="add-button" value="Lưu" ${action.equals("insert")?"":"hidden"}>
+
                 </form>
                 <%-- Data table--%>
                 <%--<table class="datatable">

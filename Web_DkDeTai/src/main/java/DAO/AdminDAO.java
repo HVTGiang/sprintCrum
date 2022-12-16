@@ -1,9 +1,10 @@
 package DAO;
 
+import model.Admin;
+
 import java.util.List;
 import java.util.Map;
 
-import model.Admin;
 public class AdminDAO extends JpaUtils<Admin> implements GenericDAO<Admin>{
 	public AdminDAO( ) {
 		super();

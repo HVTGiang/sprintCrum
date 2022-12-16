@@ -1,9 +1,9 @@
 package DAO;
 
+import model.Topic;
+
 import java.util.List;
 import java.util.Map;
-
-import model.Topic;
 
 public class TopicDAO extends JpaUtils<Topic> implements GenericDAO<Topic> {
 	public TopicDAO() {

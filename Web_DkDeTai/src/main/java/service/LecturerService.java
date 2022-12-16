@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.LecturerDAO;
-import model.Person;
 import model.Lecturer;
+import model.Person;
 
 public class LecturerService extends SuperService{
-	private static LecturerDAO LecturerDAO = new LecturerDAO();
+	private static final LecturerDAO LecturerDAO = new LecturerDAO();
 
 	public LecturerService(HttpServletRequest request, HttpServletResponse response) {
 		super(request, response);

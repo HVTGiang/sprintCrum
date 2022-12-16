@@ -7,106 +7,106 @@ import java.util.List;
 
 /**
  * The persistent class for the groupstudent database table.
- * 
+ *
  */
 @Entity
 @NamedQuery(name="Groupstudent.findAll", query="SELECT g FROM Groupstudent g")
 public class Groupstudent implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name="group_id")
-	private String groupId;
+    @Id
+    @Column(name="group_id")
+    private String groupId;
 
-	@Column(name="current_number")
-	private int currentNumber;
+    @Column(name="current_number")
+    private int currentNumber;
 
-	private String description;
+    private String description;
 
-	@Column(name="is_full")
-	private byte isFull;
+    @Column(name="is_full")
+    private byte isFull;
 
-	@Column(name="leader_id")
-	private String leaderId;
+    @Column(name="leader_id")
+    private String leaderId;
 
-	@Column(name="topic_id")
-	private String topicId;
+    @Column(name="topic_id")
+    private String topicId;
 
-	//bi-directional many-to-one association to Student
-	@OneToMany(mappedBy="groupstudent")
-	private List<Student> students;
+    //bi-directional many-to-one association to Student
+    @OneToMany(mappedBy="groupstudent")
+    private List<Student> students;
 
-	public Groupstudent() {
-	}
+    public Groupstudent() {
+    }
 
-	public String getGroupId() {
-		return this.groupId;
-	}
+    public String getGroupId() {
+        return this.groupId;
+    }
 
-	public void setGroupId(String groupId) {
-		this.groupId = groupId;
-	}
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
 
-	public int getCurrentNumber() {
-		return this.currentNumber;
-	}
+    public int getCurrentNumber() {
+        return this.currentNumber;
+    }
 
-	public void setCurrentNumber(int currentNumber) {
-		this.currentNumber = currentNumber;
-	}
+    public void setCurrentNumber(int currentNumber) {
+        this.currentNumber = currentNumber;
+    }
 
-	public String getDescription() {
-		return this.description;
-	}
+    public String getDescription() {
+        return this.description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public byte getIsFull() {
-		return this.isFull;
-	}
+    public byte getIsFull() {
+        return this.isFull;
+    }
 
-	public void setIsFull(byte isFull) {
-		this.isFull = isFull;
-	}
+    public void setIsFull(byte isFull) {
+        this.isFull = isFull;
+    }
 
-	public String getLeaderId() {
-		return this.leaderId;
-	}
+    public String getLeaderId() {
+        return this.leaderId;
+    }
 
-	public void setLeaderId(String leaderId) {
-		this.leaderId = leaderId;
-	}
+    public void setLeaderId(String leaderId) {
+        this.leaderId = leaderId;
+    }
 
-	public String getTopicId() {
-		return this.topicId;
-	}
+    public String getTopicId() {
+        return this.topicId;
+    }
 
-	public void setTopicId(String topicId) {
-		this.topicId = topicId;
-	}
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
+    }
 
-	public List<Student> getStudents() {
-		return this.students;
-	}
+    public List<Student> getStudents() {
+        return this.students;
+    }
 
-	public void setStudents(List<Student> students) {
-		this.students = students;
-	}
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
 
-	public Student addStudent(Student student) {
-		getStudents().add(student);
-		student.setGroupstudent(this);
+    public Student addStudent(Student student) {
+        getStudents().add(student);
+        student.setGroupstudent(this);
 
-		return student;
-	}
+        return student;
+    }
 
-	public Student removeStudent(Student student) {
-		getStudents().remove(student);
-		student.setGroupstudent(null);
+    public Student removeStudent(Student student) {
+        getStudents().remove(student);
+        student.setGroupstudent(null);
 
-		return student;
-	}
+        return student;
+    }
 
 }

@@ -1,9 +1,10 @@
 package DAO;
 
+import model.Lecturer;
+
 import java.util.List;
 import java.util.Map;
 
-import model.Lecturer;
 public class LecturerDAO extends JpaUtils<Lecturer> implements GenericDAO<Lecturer>{
 	public LecturerDAO( ) {
 		super();

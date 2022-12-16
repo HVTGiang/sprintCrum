@@ -1,77 +1,78 @@
 package model;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
 
-
-/**
- * The persistent class for the student database table.
- * 
- */
 @Entity
-@NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
+@NamedQueries({
+        @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s"),
+        @NamedQuery(name = "Student.findStudentByPerson", query = "SELECT s FROM Student s WHERE s.person = :person"),
+        @NamedQuery(name = "Student.getStudentByPersonId", query = "SELECT s FROM Student s WHERE s.person.personId = :personId")
+})
 public class Student implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name="major_id")
-	private String majorId;
+    @Column(name = "major_id")
+    private String majorId;
 
-	@Column(name="person_id")
-	private String personId;
+    @Column(name = "school_year")
+    private String schoolYear;
 
-	@Column(name="school_year")
-	private String schoolYear;
+    @Id
+    @Column(name = "student_id")
+    private String studentId;
 
-	@Id
-	@Column(name="student_id")
-	private String studentId;
+    //bi-directional many-to-one association to Groupstudent
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    private Groupstudent groupstudent;
 
-	//bi-directional many-to-one association to Groupstudent
-	@ManyToOne
-	@JoinColumn(name="group_id")
-	private Groupstudent groupstudent;
+    @ManyToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
 
-	public Student() {
-	}
+    public Student() {
+    }
 
-	public String getMajorId() {
-		return this.majorId;
-	}
+    public String getMajorId() {
+        return this.majorId;
+    }
 
-	public void setMajorId(String majorId) {
-		this.majorId = majorId;
-	}
+    public void setMajorId(String majorId) {
+        this.majorId = majorId;
+    }
 
-	public String getPersonId() {
-		return this.personId;
-	}
+    public String getSchoolYear() {
+        return this.schoolYear;
+    }
 
-	public void setPersonId(String personId) {
-		this.personId = personId;
-	}
+    public void setSchoolYear(String schoolYear) {
+        this.schoolYear = schoolYear;
+    }
 
-	public String getSchoolYear() {
-		return this.schoolYear;
-	}
+    public String getStudentId() {
+        return this.studentId;
+    }
 
-	public void setSchoolYear(String schoolYear) {
-		this.schoolYear = schoolYear;
-	}
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
 
-	public String getStudentId() {
-		return this.studentId;
-	}
+    public Groupstudent getGroupstudent() {
+        return this.groupstudent;
+    }
 
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
-	}
+    public void setGroupstudent(Groupstudent groupstudent) {
+        this.groupstudent = groupstudent;
+    }
 
-	public Groupstudent getGroupstudent() {
-		return this.groupstudent;
-	}
+    public Person getPerson() {
+        return this.person;
+    }
 
-	public void setGroupstudent(Groupstudent groupstudent) {
-		this.groupstudent = groupstudent;
-	}
-
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 }

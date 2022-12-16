@@ -9,6 +9,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 
 @WebServlet(name = "AdminCommiteeServlet", value = "/admin/committee")
@@ -26,9 +27,6 @@ public class AdminCommiteeServlet extends HttpServlet {
             action = new String("home");
         }
         String message = request.getParameter("message");
-        if (message != null) {
-
-        }
 
         switch (action) {
             case "home":
@@ -119,6 +117,7 @@ public class AdminCommiteeServlet extends HttpServlet {
         String committeeName = request.getParameter("committeeName");
         String committeeNumber = request.getParameter("committeeNumber");
         String description = request.getParameter("description");
+        String reportDate = request.getParameter("committeeReportDate");
 
         if (!committeeName.equals("") && !committeeNumber.equals("")) {
             Committe committe = new Committe();
@@ -129,6 +128,8 @@ public class AdminCommiteeServlet extends HttpServlet {
             committe.setNumMember(Integer.parseInt(committeeNumber));
             committe.setDescription(description);
 
+            Date date = Date.valueOf(reportDate);
+            committe.setReportDate(date);
 
             if (!"OK".equals(committeeService.checkInputData(committe))) {
                 String message = committeeService.checkInputData(committe);
@@ -167,7 +168,7 @@ public class AdminCommiteeServlet extends HttpServlet {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    String message = new String("Vừa cập nhật hội đồng <b> " + committe.getCommitteName() + "</b>");
+                    String message = new String("Vừa cập nhật hội đồng <b>" + committe.getCommitteName() + "</b>");
                     request.setAttribute("message", message);
                     getInfoForAdminCommitteePage(request, response);
                     service.forwardToPage("/default/admin/committee.jsp");

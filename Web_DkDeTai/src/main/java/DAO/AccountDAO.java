@@ -1,9 +1,9 @@
 package DAO;
 
+import model.Account;
+
 import java.util.List;
 import java.util.Map;
-
-import model.Account;
 
 public class AccountDAO extends JpaUtils<Account> implements GenericDAO<Account>{
 	public AccountDAO( ) {

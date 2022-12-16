@@ -2,8 +2,6 @@ package service;
 
 import DAO.CommitteeDAO;
 import model.Committe;
-import model.HeadLecturer;
-import model.Person;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,8 +23,11 @@ public class CommitteeService extends SuperService {
 
 
     public String checkInputData(Committe committe) {
-        if (committe.getNumMember() <= 0) {
-            return "Vui lòng nhập <b>số thành viên dương</b>!";
+        if (committe.getNumMember() < 2) {
+            return "Tối thiểu 2 thành viên!";
+        }
+        if (committe.getNumMember() > 5) {
+            return "Tối đa 5 thành viên!";
         }
         return "OK";
     }

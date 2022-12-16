@@ -10,26 +10,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe5d2b4b-c143-455f-b910-9bbf9076f5e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/committee-form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/css/committee-form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/CommitteeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/account-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/account.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/default/admin/css/account-form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminAccountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Headlecturer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Joingroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/JoingroupPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Registrationperiod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/583d5382-3ed3-4f00-b52b-a7012e5e5913.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/583d5382-3ed3-4f00-b52b-a7012e5e5913.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/default/admin/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/default/admin/committee-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/committee-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/default/admin/committee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/committee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/default/admin/css/committee.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/css/committee.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/default/header/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/header/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/default/admin/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/default/admin/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/CommitteeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/CommitteeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/HeadLecturerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/HeadLecturerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/JpaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/JpaUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/LecturerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/LecturerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/TopicDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/TopicDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminCommiteeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/AdminCommiteeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/client/admin/HomeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/client/admin/HomeAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AccountFilterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AccountFilterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filter/AdminFilterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filter/AdminFilterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Committe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Committe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Groupstudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Groupstudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/HeadLecturer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Lecturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Lecturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LecturerCommitte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LecturerCommitte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LecturerCommittePK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LecturerCommittePK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LecturerCritical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LecturerCritical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Major.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Topic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CommitteeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CommitteeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/HeadLecturerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/HeadLecturerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LecturerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LecturerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SuperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SuperService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/Web_DkDeTai/Web_DkDeTai/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/Web_DkDeTai/Web_DkDeTai/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +102,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JPA.DatabaseSchemaImportDialog": "583d5382-3ed3-4f00-b52b-a7012e5e5913",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -93,6 +127,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\SPKT\Junior\First Term\CNPM\sprintCrum\Web_DkDeTai\src\main\resources" />
       <recent name="E:\SPKT\Junior\First Term\CNPM\sprintCrum\Web_DkDeTai\WebContent\default\admin\css" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="model" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,7 +229,9 @@
       <option name="presentableId" value="Default" />
       <updated>1671086050602</updated>
       <workItem from="1671086053994" duration="16427000" />
-      <workItem from="1671119397591" duration="15061000" />
+      <workItem from="1671119397591" duration="16099000" />
+      <workItem from="1671184390623" duration="6559000" />
+      <workItem from="1671197120603" duration="20395000" />
     </task>
     <servers />
   </component>

@@ -130,4 +130,16 @@ public class JpaUtils<T> {
 		entityManager.close();
 		return result;
 	}
+
+	public List<T> findByQuery(String queryName, Map<String, Object> parameters) {
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		Query query = entityManager.createNamedQuery(queryName);
+		Set<Entry<String, Object>> setParameters = parameters.entrySet();
+		for (Entry<String, Object> entry : setParameters) {
+			query.setParameter(entry.getKey(), entry.getValue());
+		}
+		List<T> result = query.getResultList();
+		entityManager.close();
+		return result;
+	}
 }

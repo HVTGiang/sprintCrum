@@ -6,60 +6,60 @@ import javax.persistence.*;
 
 /**
  * The persistent class for the lecturer database table.
- * 
+ *
  */
 @Entity
 @Table(name="lecturer")
 @NamedQuery(name="Lecturer.findAll", query="SELECT l FROM Lecturer l")
 public class Lecturer implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name="is_head")
-	private byte isHead;
-	
-	@Id
-	@Column(name="lecturer_id")
-	private String lecturerId;
+    @Column(name="is_head")
+    private byte isHead;
 
-	@Column(name="major_id")
-	private String majorId;
+    @Id
+    @Column(name="lecturer_id")
+    private String lecturerId;
 
-	@Column(name="person_id")
-	private String personId;
+    @Column(name="major_id")
+    private String majorId;
 
-	public Lecturer() {
-	}
+    @Column(name="person_id")
+    private String personId;
 
-	public byte getIsHead() {
-		return this.isHead;
-	}
+    public Lecturer() {
+    }
 
-	public void setIsHead(byte isHead) {
-		this.isHead = isHead;
-	}
+    public byte getIsHead() {
+        return this.isHead;
+    }
 
-	public String getLecturerId() {
-		return this.lecturerId;
-	}
+    public void setIsHead(byte isHead) {
+        this.isHead = isHead;
+    }
 
-	public void setLecturerId(String lecturerId) {
-		this.lecturerId = lecturerId;
-	}
+    public String getLecturerId() {
+        return this.lecturerId;
+    }
 
-	public String getMajorId() {
-		return this.majorId;
-	}
+    public void setLecturerId(String lecturerId) {
+        this.lecturerId = lecturerId;
+    }
 
-	public void setMajorId(String majorId) {
-		this.majorId = majorId;
-	}
+    public String getMajorId() {
+        return this.majorId;
+    }
 
-	public String getPersonId() {
-		return this.personId;
-	}
+    public void setMajorId(String majorId) {
+        this.majorId = majorId;
+    }
 
-	public void setPersonId(String personId) {
-		this.personId = personId;
-	}
+    public String getPersonId() {
+        return this.personId;
+    }
+
+    public void setPersonId(String personId) {
+        this.personId = personId;
+    }
 
 }

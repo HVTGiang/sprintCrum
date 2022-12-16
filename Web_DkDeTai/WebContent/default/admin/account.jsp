@@ -10,10 +10,10 @@
     <title>Quản lý đề tài | Admin</title>
 
     <!-- logo title -->
-    <link rel="icon" href="${pageContext.request.contextPath}/asset/img/fit-logo.png" type="image/icon type">
+    <link rel="icon" href="/asset/img/fit-logo.png" type="image/icon type">
     <!-- CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/reset.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/base.css">
+    <link rel="stylesheet" href="/asset/css/reset.css">
+    <link rel="stylesheet" href="/asset/css/base.css">
     <link rel="stylesheet" href="<c:url value = "/default/admin/css/committee.css"/>">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/18ce1a4b11.js" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@ script src="./asset/script/header-import.js"></script>-->
                         Quản lý đợt đăng ký
                     </a>
                 </li>
-                <li class="selected">
+                <li class="">
                     <a href="${pageContext.request.contextPath}/admin/committee">
                         <i class="fa-solid fa-users"></i>
                         Quản lý hội đồng
@@ -58,7 +58,7 @@ script src="./asset/script/header-import.js"></script>-->
                         Thông tin cá nhân
                     </a>
                 </li>
-                <li>
+                <li class="selected">
                     <a href="${pageContext.request.contextPath}/admin/account">
                         <i class="fa-solid fa-user"></i>
                         Quản lý tài khoản
@@ -71,11 +71,11 @@ script src="./asset/script/header-import.js"></script>-->
         <!-- Breadcumb -->
         <div id="content-breadcumb">
             <p>
-                <a href="#" class="breadcumb-item hover-item">
+                <a href="${pageContext.request.contextPath}/admin" class="breadcumb-item hover-item">
                     <span>Trang chủ</span>
                 </a>
                 <span class="breadcumb-item"> > </span>
-                <span>Quản lý hội đồng</span>
+                <span>Quản lý tài khoản</span>
             </p>
         </div>
 
@@ -100,13 +100,13 @@ script src="./asset/script/header-import.js"></script>-->
             <%--Add button--%>
             <div class="add-button">
                 <i class="fa-solid fa-circle-plus"></i>
-                <a href="/admin/committee?action=insert">Tạo hội đồng</a>
+                <a href="${pageContext.request.contextPath}/admin/account?action=insert">Tạo tài khoản</a>
             </div>
             <%--Find button--%>
             <div class="find-zone">
-                <form action="/admin/committee" method="get">
+                <form action="${pageContext.request.contextPath}/admin/account" method="get">
                     <%--                    <label for="">Tìm kiếm</label>--%>
-                    <input type="text" placeholder="Nhập tên hội đồng" class="find-text-box" name="find">
+                    <input type="text" placeholder="Nhập tên" class="find-text-box" name="find">
                     <input type="hidden" value="find" name="action">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
@@ -118,22 +118,22 @@ script src="./asset/script/header-import.js"></script>-->
         <div id="content-notify">
             <div id="content-notify-header">
                 <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                <p>Danh sách hội đồng</p>
+                <p>Danh sách tài khoản</p>
             </div>
             <div id="content-notity-data-list">
 
                 <%-- Data table--%>
-                <c:if test="${not empty committeList}">
+                <c:if test="${not empty accountList}">
                     <table class="datatable">
 
                             <%-- Table header--%>
                         <thead>
                         <tr class="center-data align-item-center">
                             <th scope="col" class="center-cell witdh-column-10rem">#</th>
-                            <th scope="col" class="center-cell">Tên hội đồng</th>
-                            <th scope="col" class="center-cell witdh-column-10rem">Số thành viên</th>
-                            <th scope="col" class="witdh-column-20rem center-cell">Mô tả</th>
-                            <th scope="col" class=" center-cell">Ngày báo cáo</th>
+                            <th scope="col" class="center-cell witdh-column-20rem">Tên</th>
+                            <th scope="col" class="center-cell">User name</th>
+                            <th scope="col" class="center-cell">Password</th>
+                            <th scope="col" class=" center-cell">Vai trò</th>
                             <th scope="col" class="center-cell">Lựa chọn</th>
                         </tr>
                         </thead>
@@ -142,22 +142,24 @@ script src="./asset/script/header-import.js"></script>-->
                             <%-- Table body--%>
                         <tbody>
 
-                        <c:forEach items="${committeList}" var="c">
+                        <c:forEach items="${accountList}" var="a">
                             <tr class="center-data data-row">
-                                <th scope="row" class="center-cell witdh-column-10rem"><a href="#">${c.committeId}</a></th>
-                                <td class="justify-cell"><a href="">${c.committeName}</a></td>
-                                <td class="center-cell witdh-column-10rem">${c.numMember}</td>
-                                <td colspan="1" class="witdh-column-20rem justify-cell">
-                                        ${c.description}
+                                <th scope="row" class="center-cell witdh-column-10rem"><a href="#">${a.accountId}</a></th>
+                                <td colspan="1" class="justify-cell witdh-column-20rem">
+                                        ${a.person.fullName}
                                 </td>
-                                <td class="center-cell">${c.reportDate}</td>
+                                <td class="center-cell"><a href="">${a.username}</a></td>
+                                <td class="center-cell">${a.password}</td>
+                                <td colspan="1" class="center-cell">
+                                        ${a.person.role}
+                                </td>
                                 <td class="center-cell">
-                                    <a href="/admin/committee?action=edit&committeeId=${c.committeId}"
-                                       class="btn btn-primary edit-button action-column-element">Sửa</a>
+                                    <a href="${pageContext.request.contextPath}/admin/account?action=edit&accountId=${a.accountId}"
+                                       class="btn btn-primary edit-button action-column-element">Chi tiết</a>
                                     <form action="" method="post">
-                                        <input class="delete-button action-column-element" type="submit"
+                                        <input class="delete-button action-column-element" type="hidden"
                                                value="Xóa"
-                                               onclick="if (confirm('Bạn có chắc chắn muốn xóa hội đồng này?')) { form.action=''; } else { return false; }"/>
+                                               onclick="if (confirm('Bạn có chắc chắn muốn xóa hội đồng này?')) { form.action=''; } else { return false; }" />
                                     </form>
                                 </td>
                             </tr>
@@ -171,9 +173,9 @@ script src="./asset/script/header-import.js"></script>-->
                     <%--End data table--%>
                 </c:if>
 
-                <c:if test="${empty committeList}">
+                <c:if test="${empty accountList}">
                     <div style="text-align: center; padding: 25px; color: var(--blue-color)">
-                        Chưa có hội đồng
+                        Chưa có tài khoản
                     </div>
                 </c:if>
             </div>

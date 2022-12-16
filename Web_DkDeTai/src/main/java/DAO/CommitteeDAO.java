@@ -1,6 +1,5 @@
 package DAO;
 
-import model.Admin;
 import model.Committe;
 
 import java.util.List;

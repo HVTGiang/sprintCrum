@@ -6,6 +6,7 @@
 }
 
 #content-main {
+    width: 90rem;
     margin-left: 40px;
 }
 
@@ -126,7 +127,7 @@
 
 /* Notify */
 #content-notify {
-    width: 733px;
+    /*width: 733px;*/
     /*height: 366px;*/
     border: 2px solid var(--blue-color);
     box-shadow: 8px 8px 2px rgba(154, 154, 154, 0.25);
@@ -333,8 +334,8 @@ ul > li > a {
     color: var(--blue-color);
 }
 
-.datatable .witdh-column-27rem {
-    width: 27rem;
+.datatable .witdh-column-20rem {
+    width: 20rem;
 }
 
 .datatable .witdh-column-5rem {

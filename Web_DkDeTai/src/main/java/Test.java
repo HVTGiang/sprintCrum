@@ -1,11 +1,6 @@
 import DAO.AccountDAO;
-import DAO.AdminDAO;
-import DAO.CommitteeDAO;
 import model.Account;
-import model.Admin;
-import model.Committe;
-import service.AdminService;
-import service.CommitteeService;
+import service.PersonService;
 
 import java.util.List;
 
@@ -18,10 +13,19 @@ public class Test {
 //            System.out.println(acc.getDescription());
 //        }
 
-        CommitteeDAO committeeDAO = new CommitteeDAO();
-        Committe committe = committeeDAO.find("cmt00001");
-        CommitteeService committeeService = new CommitteeService();
-        System.out.println(committeeService.findCommitteeByName(committe).get(0).getCommitteName());
+//        CommitteeDAO committeeDAO = new CommitteeDAO();
+//        Committe committe = committeeDAO.find("cmt00001");
+//        CommitteeService committeeService = new CommitteeService();
+//        System.out.println(committeeService.findCommitteeByName(committe).get(0).getCommitteName());
+
+        AccountDAO adminDAO = new AccountDAO();
+        List<Account> accountList = adminDAO.findAll();
+        PersonService personService = new PersonService();
+        /*personService.InsertPersonIntoAccountList(accountList);*/
+        for (Account a : accountList
+        ) {
+            System.out.println(a.getPerson().getFullName());
+        }
 
     }
 }

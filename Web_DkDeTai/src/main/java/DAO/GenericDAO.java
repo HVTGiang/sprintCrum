@@ -3,8 +3,6 @@ package DAO;
 import java.util.List;
 import java.util.Map;
 
-import model.Topic;
-
 public interface GenericDAO<T> {
 	public T create(T entity);
 	public T update(T entity);

@@ -1,43 +1,62 @@
 package model;
 
-import java.io.Serializable;
 import javax.persistence.*;
 
-
-/**
- * The persistent class for the lecturer_critical database table.
- * 
- */
 @Entity
-@Table(name="lecturer_critical")
-@NamedQuery(name="LecturerCritical.findAll", query="SELECT l FROM LecturerCritical l")
-public class LecturerCritical implements Serializable {
-	private static final long serialVersionUID = 1L;
+@Table(name = "lecturer_critical", schema = "dkdetai", catalog = "")
+public class LecturerCritical {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "lecturer_id")
+    private String lecturerId;
+    @Basic
+    @Column(name = "person_id")
+    private String personId;
+    @OneToOne
+    @JoinColumn(name = "lecturer_id", referencedColumnName = "lecturer_id", nullable = false)
+    private Lecturer lecturerByLecturerId;
 
-	@Id
-	@Column(name="lecturer_id")
-	private String lecturerId;
+    public String getLecturerId() {
+        return lecturerId;
+    }
 
-	@Column(name="person_id")
-	private String personId;
+    public void setLecturerId(String lecturerId) {
+        this.lecturerId = lecturerId;
+    }
 
-	public LecturerCritical() {
-	}
+    public String getPersonId() {
+        return personId;
+    }
 
-	public String getLecturerId() {
-		return this.lecturerId;
-	}
+    public void setPersonId(String personId) {
+        this.personId = personId;
+    }
 
-	public void setLecturerId(String lecturerId) {
-		this.lecturerId = lecturerId;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-	public String getPersonId() {
-		return this.personId;
-	}
+        LecturerCritical that = (LecturerCritical) o;
 
-	public void setPersonId(String personId) {
-		this.personId = personId;
-	}
+        if (lecturerId != null ? !lecturerId.equals(that.lecturerId) : that.lecturerId != null) return false;
+        if (personId != null ? !personId.equals(that.personId) : that.personId != null) return false;
 
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = lecturerId != null ? lecturerId.hashCode() : 0;
+        result = 31 * result + (personId != null ? personId.hashCode() : 0);
+        return result;
+    }
+
+    public Lecturer getLecturerByLecturerId() {
+        return lecturerByLecturerId;
+    }
+
+    public void setLecturerByLecturerId(Lecturer lecturerByLecturerId) {
+        this.lecturerByLecturerId = lecturerByLecturerId;
+    }
 }

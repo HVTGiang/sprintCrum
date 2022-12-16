@@ -1,13 +1,11 @@
 package model;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
+import java.sql.Date;
+import java.util.Collection;
 import java.util.List;
 
-
-/**
- * The persistent class for the committe database table.
- */
 @Entity
 @NamedQuery(name = "Committe.findAll", query = "SELECT c FROM Committe c")
 @NamedQuery(name = "Committee.findCommitteeByName", query = "SELECT c from Committe c where committeName=:name")
@@ -23,6 +21,16 @@ public class Committe implements Serializable {
     private String committeName;
 
     private String description;
+
+    private Date reportDate;
+
+    public Date getReportDate() {
+        return reportDate;
+    }
+
+    public void setReportDate(Date reportDate) {
+        this.reportDate = reportDate;
+    }
 
     @Column(name = "num_member")
     private int numMember;
@@ -87,5 +95,4 @@ public class Committe implements Serializable {
 
         return lecturerCommitte;
     }
-
 }
